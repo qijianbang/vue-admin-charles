@@ -85,12 +85,12 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-            let url = "http://localhost:6677/customer/deleteById?id"+id;
+            let url = "http://localhost:6677/customer/deleteById?id="+id;
             request.get(url).then((response)=>{
                 this.loadData();
                 this.$message({
                 type: 'success',
-                message:response.mess
+                message:response.message
                 });
             })
          
